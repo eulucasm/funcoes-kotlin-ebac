@@ -7,20 +7,33 @@ fun main() {
    val citiesList = listOf("Campinas", "monte mor", "Hortolandia", "Paulinia")
    val statesList = listOf("São paulo", "Rio de janeiro", "Espirito santo", "Minas Gerais")
 
-   
-
+   /** Filter + map + forEach
+   citiesList.filter { it.length > 6 }.map { "olá $it" }.forEach { println(it) }
+   */
+   /** forEach encadeado com map
+   citiesList.map{
+   "olá $it"
+   }.forEach{
+   println(it)
+   }
+    */
+   /**forEach normal
+   citiesList.forEach{
+   println(it)
+   }
+    */
    /**Associate
    val mapCities = citiesList.associateWith{ it.length }
    val mapLength = citiesList.associateBy { it.length }
    println(mapCities)
    println(mapLength)
-   */
+    */
    /**Zip
    val cityState = citiesList.zip(statesList) { city, state ->
-      "$city é relacionado a fake $state\n"
+   "$city é relacionado a fake $state\n"
    }
    println(cityState)
-   */
+    */
    /** Map
    val div = listNumber.map{ it / 2 }
    println(div)
